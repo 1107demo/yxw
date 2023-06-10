@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>留言中心</title>
+		<meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1.0,maximum-scale=1.0"/><!-- 设置视口 -->
+		
+		<link rel="stylesheet" href="css/normalize.css" />  <!-- 初始化默认样式 -->
+		<link rel="stylesheet" type="text/css" href="css/05.css"/>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+		
+		<script src="./js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<body class="bg-dark text-light">
+			<!-- 导航栏 -->
+			<div style="position: relative; height:	4.0625rem;">
+				<nav class="fixed-top bg-dark navbar-dark navbar-expand-md navbar">
+					<div class="navbar-text unav">
+						<b>XXXX</b>
+					</div>
+					<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#demo">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div id="demo" class="collapse navbar-collapse demo02">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item"><a class="nav-link" href="index.html">首页</a></li>
+							<li class="nav-item"><a class="nav-link" href="introduce.html">游戏简介</a></li>
+							<li class="nav-item"><a class="nav-link" href="draw.html">画风展示</a></li>
+							<li class="nav-item"><a class="nav-link" href="guideline.html">游戏攻略</a></li>
+							<li class="nav-item"><a class="nav-link active" href="leave.html">留言中心</a></li>
+						</ul>
+					</div>
+					<div class="collapse navbar-collapse">
+						<form class="form-inline">
+							<input class="form-contro" type="text" placeholder="搜点啥？" />
+							<button class="btn btn-outline-info" type="submit">搜 索</button>
+						</form>
+					</div>
+				</nav>
+			</div>
+			<div id="banner"></div>
+			<div class="massage">
+				<div class="massage-top">
+					<div class="top-bg">
+						<p>您可以留下您宝贵的意见我们会在第一时间回复您，谢谢关注！</p>
+						<div>123456@qq.com</div>
+					</div>
+				</div>
+				<div class="massage-bottom container">
+					<h1>留言板</h1>
+					<div class="from">
+						<form action="javacript:void(0)" method="" style="align-content: center;">
+							<div class="from-1">
+								<p><span style="color: red;">*</span>您的ID名</p>
+								<input type="text" name="" id="uid" value="" placeholder="请输入您的姓名"/>
+							</div>
+							<div class="from-1">
+								<p><span style="color: red;">*</span>联系方式</p>
+								<input type="text" name="" id="lx" value="" placeholder="请输入您的电话"/>
+							</div>
+							<div class="from-1">
+								<p><span style="color: red;">*</span>您的邮箱</p>
+								<input type="email" name="" id="yx" value="" placeholder="请输入您的邮箱"/>
+							</div>
+							
+							<div class="from-2">
+								<p><span style="color: red;">*</span>留言内容</p>
+								<textarea rows="8" cols="60" name="ly" placeholder="请输入您想咨询或者留言的内容" style="width: 95%;"></textarea>
+							</div>
+							<div class="from-3">
+								<div id="val" style="text-align: center; color: red;"></div>
+								<input type="submit" id="" name="" onclick="danji();" />
+								<input type="reset" value="重置全部" />
+								
+							</div>
+							
+						</form>
+					
+					</div>
+					
+				</div>
+				
+			</div>
+			<div class="top">回到顶部</div>
+			<div class="foot">
+				<div class="foot-bg">
+					<div style="color: #FFF; align-content: center;padding: 31px 0;">
+						<p>@2020-2023 级 独爱牛肉面</p>
+						<p>框架bootstrap&nbsp;&nbsp;|&nbsp;&nbsp;jquery</p>
+						<p>你好，再见</p>
+						<p>备案ICP2020041127号</p>
+					</div>
+				</div>
+			</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			//显示顶部
+			$(window).scroll(function(){
+				if($(this).scrollTop()>520){
+					$(".top").css("display","inline-block");
+				}
+				else{
+					$(".top").css("display","none")
+				}
+			})
+			$(".top").click(function(){
+				$("html,body").scrollTop(0);
+			})
+		})
+		function danji(){
+			var a=document.getElementById("val")
+			var b=document.getElementById("uid").value
+			var c=document.getElementById("lx").value
+			var d=document.getElementById("yx").value
+			var e=document.getElementsByName("ly").value
+			if(b== null || b.trim() == "") {
+				a.innerHTML = '用户名不为空!';
+				return;
+			}
+			if (c== null || c.trim() == "") {
+				// 通过innerHTML赋值
+				a.innerHTML = '联系方式不能为空！';
+				return;
+			}
+			if (c.indexOf(b) > 0) {
+				a.innerHTML = '联系方式不能包含用户名！';
+				return;
+			}
+			if (c.length < 6 || c.length > 12) {
+				a.innerHTML = '联系方式长度在6-12位之间！';
+				return;
+			}
+			if (d== null || d.trim() == "") {
+				// 通过innerHTML赋值
+				a.innerHTML = '邮箱不能为空！';
+				return;
+			}
+			if (e== null || e.trim() == "") {
+				// 通过innerHTML赋值
+				a.innerHTML = '留言不能为空！';
+				return;
+			}
+		}
+		
+		
+				
+			
+			
+		
+		
+	</script>
+</html>

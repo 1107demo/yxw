@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/logos.css"/>
+	<body>
+		<div id="logtop">
+			<div id="logcenton">
+				<p class="logtable">Login</p>
+				<br>
+				<div id="val" style="text-align: center; color: red;" ></div>
+				<input type="text" name="" id="yhm" value="" placeholder="账号"/>
+				<input type="password" name="" id="mim" placeholder="密码"/>
+				<button type="submit" class="logbtn" onclick="dj();">登录</button>
+				<p style="text-align: center;margin-top: 8%;"><a href="攻略宝箱.html" style="color: #FFF;font-weight: 600;">点我返回</a></p>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		function $(id){
+			return document.getElementById(id);
+		}
+		function dj(){
+			var uname=$("yhm").value;
+			if(uname== null || uname.trim() == "") {
+				$("val").innerHTML = '用户名不为空!';
+				return;
+			}
+			if (uname.length < 6 || uname.length > 12) {
+				$("val").innerHTML = '用户名长度在6-12位之间！';
+				return;
+			}
+			var upwd = $("mim").value;
+			if (upwd== null || upwd.trim() == "") {
+				// 通过innerHTML赋值
+				$("val").innerHTML = '密码不能为空！';
+				return;
+			}
+			if (upwd.indexOf(uname) > 0) {
+				$("val").innerHTML = '密码不能包含用户名！';
+				return;
+			}
+			if (upwd.length < 6 || upwd.length > 12) {
+				$("val").innerHTML = '密码长度在6-12位之间！';
+				return;
+			}
+		}
+	</script>
+</html>

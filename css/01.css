@@ -1,0 +1,155 @@
+*{
+	margin: 0;
+	padding: 0;
+	/* border: 1px solid red; */
+}
+/* “媒体查询”根据不同屏幕来设置显示大小 */
+@media screen and (min-width: 1200px) {
+  .carousel-item>img{height: 650px; }
+  /* 因为组件默认图片大小位置，且位置变化是在超小屏幕下生效缩放，当设置了650后缺点是1200到768不能正常显示 */
+  .carousel-caption{top: 75%;}
+  .card01{padding: 50px;}
+  .about{height: 480px;}
+}/* 由于为缩小屏幕正常显示所以把其中代码放置，在大于1200正常显示 */
+
+.unav b{
+	color: #FFF;
+	margin-left: 50px;
+	font-size: 1.375rem;
+}
+.demo02{
+	margin-left: 31.25rem;
+}
+@media screen and (min-width:768px) and (max-width:1235px){
+	.demo02{margin-left: 0;}
+}
+.unav-foot{
+	position: absolute;
+	left: 49%;
+	top: 90%;
+	font-size: 50px;
+	color: #FFF;
+	cursor: pointer;
+}
+.down{
+	position: absolute;
+	animation: dow 1.5s infinite;
+}
+@keyframes dow{
+	0%{
+		top: 0;
+		opacity: 0.4;
+	}
+	50%{
+		top: -16px;
+		opacity: 0.4;
+	}
+	100%{
+		top: 0;
+		opacity: 1;
+		filter: none;
+	}
+}
+#conten-left{
+	width: 64%;
+	height: 1000px;
+	float: left;
+	margin-top: 210px;
+	cursor: pointer;
+}
+#conten-left>p{
+	text-indent: 33px;
+}
+#conten-right{
+	float: left;
+	margin: 10% 0 0 1%;
+	width: 34%;
+	height: 1000px;
+	display: flex;
+	align-items: center;
+	flex-direction: column; /* 垂直排列 */
+}
+.card01{
+	margin: 20px 0;
+	width: 65%;
+	height: 200px;
+	color: #FFF;
+	background-color: #0DCAF0;
+	border: 1px solid #cccccc;
+	border-radius: 25px;
+	box-shadow: 1px 10px 28px #D3D6D8;
+	cursor: pointer;
+}
+.btnn{float: left;margin:2%; height: 20%; border: 1px solid transparent; border-radius: 8px; color: #FFF;font-size: 10px;text-align: center;}
+.fabull{
+	animation: bull 1.5s infinite;
+}
+@keyframes bull{
+	0%,100%{transform: scale(1);}
+	50%{transform: scale(1.2);}
+}
+.about h1{
+	margin-top: 10%;
+	text-align: center;
+	font-size: 30px;
+	font-weight: 700;
+}
+.about>p{
+	margin-top: 3%;
+	text-indent: 50px;/* 首行缩进 */
+	font-size: 20px;
+	margin-bottom: 10%;
+}
+.wz{
+	font-size: 27px;
+	font-weight: 600;
+	margin-left: 1%;
+	
+}
+.moudel{
+	height: 250px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 6%;
+}
+.moudel-card{
+	width: 24%;
+	height: 200px;
+	border: 1px solid transparent;
+	border-radius: 30px;
+	box-shadow: 1px 1px 3px #CCCCCC;
+	position: relative;
+	cursor: pointer;
+}
+.moudel-card>p{
+	position: absolute;
+	left: 40%;
+	top: 115%;	
+}
+.foot{
+	width: 100%;
+	height: 220px;
+	text-align: center;
+	background-color: #2c2d2e;
+}
+.foot-bg{
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0,0,0,0.4);
+}
+.top{
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+	width: 43px;
+	height: 43px;
+	border: 1px solid transparent;
+	border-radius: 22px;
+	background-color: #DEDEDE;
+	text-align: center;
+	font-size: 14px;
+	color: #666666;
+	cursor: pointer;
+	display: none;
+}
