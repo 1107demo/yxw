@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>游戏简介</title>
+		<meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1.0,maximum-scale=1.0"/><!-- 设置视口 -->
+		
+		<link rel="stylesheet" href="css/normalize.css" />  <!-- 初始化默认样式 -->
+		<link rel="stylesheet" type="text/css" href="css/02.css"/>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+		
+		<script src="./js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<body bgcolor="f7f8fe" class="bg-dark">
+			<!-- 导航栏 -->
+			<div style="position: relative; height:	4.0625rem;">
+				<nav class="fixed-top bg-dark navbar-dark navbar-expand-md navbar">
+					<div class="navbar-text unav">
+						<b>XXXX</b>
+					</div>
+					<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#demo">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div id="demo" class="collapse navbar-collapse demo02">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item"><a class="nav-link" href="index.html">首页</a></li>
+							<li class="nav-item"><a class="nav-link active" href="introduce.html">游戏简介</a></li>
+							<li class="nav-item"><a class="nav-link" href="draw.html">画风展示</a></li>
+							<li class="nav-item"><a class="nav-link" href="guideline.html">游戏攻略</a></li>
+							<li class="nav-item"><a class="nav-link" href="leave.html">留言中心</a></li>
+						</ul>
+					</div>
+					<div class="collapse navbar-collapse">
+						<form class="form-inline">
+							<input class="form-contro" type="text" placeholder="搜点啥？" />
+							<button class="btn btn-outline-info" type="submit">搜 索</button>
+						</form>
+					</div>
+				</nav>
+			</div>
+			<div id="banner"></div>
+			<div id="mytop" class="container bg-light">
+				<div class="tit">
+					<p>|&nbsp;世界在你手中</p>
+					<div class="tit-img">
+						<img src="img/03.png" >
+					</div>
+					<div class="tit-wz">
+						<p>《封神斗魂》是开发世界冒险的一款游戏，在广阔的大世界中充满多种挑战星罗棋布与惊险又刺激的无规则竞争。游戏开局上线就送免费的轻功，可以在自由探索广阔世界中腾云起飞，自由翱翔，让飞行不再是少数人的特权。里面有经典而又熟悉的斗魂，伴随华丽的战技。有大型的世界BOOS级的怪物，有众多魂装魂环不同属性，有不同副本团本，有竞技场，有组队挑战，有严格审核的不同等级宗门及宗门战，有许多不同宝箱等您寻找，其中蕴含许多不同强大魂怪等等全新玩法等你来探索！</p>
+					</div>
+				</div>
+			</div>
+			<div id="mytop" class="container bg-light">
+				<div>
+					<h1 align="center" style="margin-top: 3%;">关于游戏</h1>
+					<p style="text-indent: 30px; text-align: center;cursor: pointer;">诺丁城→索托城→星斗大森林→杀戮之都...</p>
+					<video controls style="width: 35%;margin-left: 34%;">
+						<source src="img/jianjie.mp4" type="video/mp4">
+					</video>
+				</div>
+			</div>
+			<div class="top">回到顶部</div>
+			<div class="foot">
+				<div class="foot-bg">
+					<div style="color: #FFF; align-content: center;padding: 31px 0;">
+						<p>@2020-2023 级 独爱牛肉面</p>
+						<p>框架bootstrap&nbsp;&nbsp;|&nbsp;&nbsp;jquery</p>
+						<p>你好，再见</p>
+						<p>备案ICP2020041127号</p>
+					</div>
+				</div>
+			</div>，
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			//显示顶部
+			$(window).scroll(function(){
+				if($(this).scrollTop()>520){
+					$(".top").css("display","inline-block");
+				}
+				else{
+					$(".top").css("display","none")
+				}
+			})
+			$(".top").click(function(){
+				$("html,body").scrollTop(0);
+			})
+		})
+	</script>
+</html>
